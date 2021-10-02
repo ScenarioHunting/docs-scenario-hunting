@@ -1,4 +1,5 @@
-<!-- {docsify-ignore-all} -->
+<!-- {docsify-ignore} -->
+
 # What is Scenario Hunting? 
 Scenario Hunting is a process of switching from modeling artifacts to test code. The process consists of a set of steps that continually puts flesh on the model to the point that the test cases can be automatically generated from the model.
 
