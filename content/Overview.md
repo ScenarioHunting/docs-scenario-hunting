@@ -1,12 +1,14 @@
 # What is Scenario Hunting? 
-Scenario Hunting is a process of switching from modeling artifacts to test code. The process consists of a set of steps that continually puts flesh on the model to the point that the test cases can be automatically generated from the model.
+Scenario Hunting is a process of switching from modeling artifacts to test code. The process consists of a set of steps that continually puts flesh on the design to the point that the test cases can be automatically generated from the model.
 
 The test code generation is as cheap as a spike but as high quality as production, because the tests are derived from design, and speak the language of the domain. You achieve higher quality with lower cost.
 
 
 # The problem with traditional approaches
-- Yoyo problem
+- The cost of task switching
+- Human memory errors   
 - Mistranslation of model to the code
+- Yoyo problem
 - Code divergence from the design
 - Long feedback loop (big design upfront)
 - Drastic cost of jumping into implementation instead of smoothly drilling down to get the feedback about the feasibility of the proposed model
