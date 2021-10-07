@@ -17,19 +17,28 @@
   <div id="app">Scenario Hunting</div>
   <script>
     window.$docsify = {
-      loadSidebar: true,
+      loadSidebar: '_sidebar.md',
       name: 'Scenario Hunting',
       repo: 'https://github.com/ScenarioHunting/ScenarioHunting',
-      subMaxLevel: 3,
+      subMaxLevel: 10,
       coverpage: false,
       homepage: 'content/Overview.md',
+
+      //Plugins' configuration
+      pagination: {
+        crossChapter: true,
+      },
 
     }
   </script>
   <!-- Docsify v4 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js" type="text/javascript">
-  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js" type="text/javascript"></script>
+
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+
+  
 </body>
 
 </html>
