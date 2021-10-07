@@ -1,6 +1,6 @@
 - [Overview](content/Overview.md)
 
 - Quick Start
-    - [Installation](content/Quick-Start/Installation.md)
-    - [Hunting a scenario](content/Quick-Start/Hunting-a-scenario.md)
-    - [Building a template](content/Quick-Start/Building-a-template.md)
+    - [Installation](content/Quick-Start/Installation/article.md)
+    - [Hunting a Scenario](content/Quick-Start/Hunting-a-scenario/article.md)
+    - [Building a Template](content/Quick-Start/Building-a-template/article.md)
