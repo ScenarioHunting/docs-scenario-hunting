@@ -1,5 +1,5 @@
 # Scenario Hunting 
-A process of switching from modeling artifacts to test code.
+Switching from modeling space to implementation space.
 
 Watch this 5 minuets demo:
 
