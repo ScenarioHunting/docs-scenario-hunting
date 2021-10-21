@@ -27,7 +27,7 @@ This is what happens:
 
 ## How to build a template?
 
-It's best to start building a template by hunting a real scenario, and writing the test code we expect to be generated for it. 
+It's best to start building a template by hunting a real scenario, then clearly write the actual test code we expect to be generated for the hunted scenario. Let's do it.
 
 Imagine the following scenario.
 
@@ -55,26 +55,94 @@ Let's click on new template button
 
 ![Click add a new template button](images/add-a-new-template.png)
 
-To open template studio on our browser
+To open template studio inside our browser window.
 
 ![Template studio opened 1st time](images/template-studio-opened-1st-time.png)
 
-The default template when we open the template studio is a `yaml` function with `.` (the model of the scenario we've hunted) as it's parameter. The generated yaml representation of the scenario specification, can be seen in the preview section of the template studio.
+The default template when we open the template studio is `{{{yaml .}}}`. It's a `yaml` function with `.` (the model of the scenario we've hunted) as it's parameter. The generated yaml representation of the scenario specification, can be seen in the preview section of the template studio. 
 
+![Yaml template description](images/yaml-template-description.jpg)
 
+!> Handlebars compiles only the code that is `{{inside of the blocks}}`. If we write a text outside of Handlebars' blocks, the exact same text appears in the preview pane.
 
-Template studio has three section. Template
+Template studio has three panes:
+- The `template pane` is on the left.
+- The `preview pane` is in the middle.
+- The `expected preview pane` is on the right.
 
-After building and passing it, it's the time to write the template that generates the expected test. 
+Let's copy the gherkin we expect to be generated for this scenario and paste it to the expected preview pane.
 
-Img
+![Expected gherkin preview pasted](images/expected-gherkin-pasted.png)
 
-Let's copy the expected output to the expectation section
+Template studio automatically shows the difference between the actual preview of the template and the expected preview. The red color of the preview pane is telling us that the preview is totally different from what we expect.
 
-Img
+To fix it, we copy the expected preview and paste it as a template to the template pane.
 
-Then copy the expected test to the template section
+![Preview pasted as a template](images/preview-pasted-as-template.png)
 
-Img
+By pasting it the preview pane get's updated. All of the three panes show the identical text now.
+No red highlights by the diff tool anymore, but if we save the template and hunt another scenario, it generates the gherkin for this scenario. It means that there are some constants we should replace with variable parameters from the scenario model.
 
-Now we gradually replace the constants with the variable parameters that will be filled with values from templates that will be hunted later. 
+Let's start by replacing the title of the scenario outline. 
+
+![Start changing the title of the scenario outline](images/scenario-title-changed.png)
+
+It's telling us that the title of the scenario is expected to be lower case, but the template preview shows us the camel case version of the scenario title. So let's fix both expected scenario title. 
+
+To be specific about the title of the scenario we pass it to the `sentenceCase` builtin function.
+
+![Sentence case scenario title](images/scenario-title-sentence-cased.png)
+
+And the preview and the expected preview are the same again. The templating language is [handlebars](https://handlebarsjs.com/).
+ Handlebars is mostly used for generating html views in MVC implementations. 
+ 
+ To continue building the template we follow the [handlebar's documentation](https://handlebarsjs.com/). And this is the final gherkin template.
+
+ ````handlebars
+ Scenario Outline: {{spaceCase scenario.title}}
+Given {{#each given as |step index|}}{{spaceCase step.title}} {{>table object=step.schema}}
+{{#unless @last}} And {{/unless}}{{/each}}When {{#with when as |step|}} {{spaceCase step.title}} {{>table object=step.schema}}
+{{/with}}
+Then {{#each then as |step|}} {{spaceCase step.title}} {{>table object=step.schema}}
+{{#unless @last}} And {{/unless}}{{/each}}
+
+{{#*inline 'table' object}}{{#each object.properties as |property title|}}
+        {{>row title=title  value=property.example}}{{/each}}{{/inline}}
+
+{{#*inline 'row' title value}}
+| {{>column (spaceCase title)}} | {{>column value}} |{{/inline}}
+
+{{#*inline 'column'}}
+{{.}} {{>fill_rest}}{{/inline}}
+
+{{#*inline 'fill_rest'}}
+{{repeat ' ' (subtract 15 (lookup (lowerCase .) 'length'))}}{{/inline}}
+````
+
+!> Copy the gherkin code on top, paste it to your Template Studio after hunting the scenario. Play with it to see the effect of changes you make to the preview. That helps you to quickly learn building templates.
+
+Let's save the template.
+
+![Save button clicked](images/save-button-1-clicked.jpg)
+
+By clicking the save button, we need to type the following information:
+* A template that specifies how the name of test files should be generated, as well
+* The extension of the gherkin file (so we should change the `yml` we see in the following image to `feature`)
+* And the template name we want to appear in the template drop down at the time of hunting scenarios. (we type gherkin-scenario)
+
+![Save button clicked](images/click-save-button-2.png)
+
+Now we can design drive as many gherkin scenarios as we need, in a mater of a few clicks 🚀, without losing our focus on the model.
+
+Let's test it
+
+![Save the hunted gherkin scenario](images/save-hunted-scenario.png)
+
+And it generates the following gherkin scenario
+
+![Gherkin scenario output](images/scenario-as-gherkin.png)
+
+## Is it worth building templates?
+Template builder makes building templates as easy as possible. 
+Handlebars' syntax is easy. 
+And once you build a template, everybody can use it as many times as needed. Which means more agility. No need to relay on our memory for translating the model to code, and at the same time being aware of coding standards, design style, etc.
