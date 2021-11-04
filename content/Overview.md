@@ -1,7 +1,7 @@
 # Scenario Hunting 
-A process of switching from modeling artifacts to test code.
+Switching from modeling space to implementation space.
 
-5 minute demo:
+#### 5 Minute Demo:
 
 <!-- tabs:start -->
 <!-- tab:Event Storming -->
@@ -9,4 +9,3 @@ A process of switching from modeling artifacts to test code.
 <!-- tab:Event Modeling -->
 <iframe style="width:100%" height="524" src="https://www.youtube.com/embed/mZI3s-hTQVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <!-- tabs:end -->
-
