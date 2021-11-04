@@ -1,7 +1,7 @@
 # Scenario Hunting 
 A process of switching from modeling artifacts to test code.
 
-See this 5 minuets demo:
+5 minute demo:
 
 <!-- tabs:start -->
 <!-- tab:Event Storming -->
