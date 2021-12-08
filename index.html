@@ -7,10 +7,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.min.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css"
     title="docsify-darklight-theme" type="text/css" />
 
+  <style>
+    :root {
+      --docsifytabs-border-color: var(--textColor);
+      --docsifytabs-tab-highlight-color: var(--textColor);
+      --docsifytabs-tab-background: inherit;
+      --docsifytabs-tab-color--active: inherit;
+    --docsifytabs-tab-highlight-px      : 5px;
+  }
+  </style>
 </head>
 
 <body>
@@ -31,9 +41,10 @@
       tabs: {
         persist: true,      // default
         sync: true,      // default
-        theme: 'classic', // default
+        theme: 'classic',
         tabComments: true,      // default
         tabHeadings: true       // default
+
       },
 
     }
@@ -47,6 +58,7 @@
   <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
 
   <script src="//unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script>
+
 
 </body>
 
