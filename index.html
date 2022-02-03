@@ -18,8 +18,8 @@
       --docsifytabs-tab-highlight-color: var(--textColor);
       --docsifytabs-tab-background: inherit;
       --docsifytabs-tab-color--active: inherit;
-    --docsifytabs-tab-highlight-px      : 5px;
-  }
+      --docsifytabs-tab-highlight-px: 5px;
+    }
   </style>
 </head>
 
@@ -46,6 +46,13 @@
         tabHeadings: true       // default
 
       },
+      mustache: {
+        data: [
+          {
+            imageCDN: 'https://cdn.jsdelivr.net/gh/ScenarioHunting/docs-scenario-hunting/content/Quick-Start/Hunting-a-scenario'
+          }
+        ]
+      }
 
     }
   </script>
@@ -59,7 +66,7 @@
 
   <script src="//unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script>
 
-
+  <script src="//cdn.jsdelivr.net/npm/docsify-mustache"></script>
 </body>
 
 </html>
