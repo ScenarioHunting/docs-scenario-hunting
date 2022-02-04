@@ -1,7 +1,7 @@
 
 ## Building a Template
 
-![Scenario + Template = Test Code](https://cdn.jsdelivr.net/gh/ScenarioHunting/docs-scenario-hunting/content/Quick-Start/Hunting-a-scenario/images/shared/scenario-and-template-is-test.jpg)
+![Scenario + Template = Test Code.](https://cdn.jsdelivr.net/gh/ScenarioHunting/docs-scenario-hunting/content/Quick-Start/Hunting-a-scenario/images/shared/scenario-and-template-make-test.jpg)
 A Template like a view in MVC pattern, accepts a model to generate code.
 
 This is an example of a template
@@ -19,7 +19,7 @@ This is an example of a template
 
 What happens when we pass the following scenario to the template above?
 
-![A scenario with given steps](https://cdn.jsdelivr.net/gh/ScenarioHunting/docs-scenario-hunting/content/Quick-Start/Hunting-a-scenario/images/shared/remove-items-from-basket-scenario.png)
+![A scenario with given steps.](https://cdn.jsdelivr.net/gh/ScenarioHunting/docs-scenario-hunting/content/Quick-Start/Hunting-a-scenario/images/shared/remove-items-from-basket-scenario.png)
 
 This is what happens:
 
