@@ -25,7 +25,10 @@ This is what happens:
 
 ![How scenarios map to templates](https://cdn.jsdelivr.net/gh/ScenarioHunting/docs-scenario-hunting@gh-pages/content/Quick-Start/Building-a-template/images/shared/scenario-template-mapping.jpg)
 
-A tiny pice of clean test code gets generated.
+By passing the parameters from the abstract scenario to the template, a tiny pice of clean test code gets generated.
+
+![How scenarios map to templates](images/shared/test-code-generated.png)
+
 ## How to build a template?
 
 It's best to start building a template by hunting a real scenario, then clearly write the actual test code we expect to be generated for the hunted scenario. Let's do it.
