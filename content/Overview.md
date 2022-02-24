@@ -2,11 +2,14 @@
 Scenario Hunting is a method of switching from modeling space to implementation space. It helps you to focus on what deserves your attention (the model).
 
 
-Rather than ignoring all implementation details as a totally different phase from design, you selectively deal with details on the sidelines, alongside getting instant feedbacks from them. Some details are important they affect the model. The model should be adjusted as we experiment with code. Waiting for implementation phase as a general method wastes our time.
+The method narrows the gap between modeling and implementation by selectively dealing with code on the sidelines while focusing on design.
+During coding, some details turn out to be important and affect the rest of the system. Adjustments to the model at that point requires full attention to the causal relationship between the elements, and is best to be done collaboratively. 
+
+Scenario Hunting has made it possible to quickly reflect a portion of a visual model as a test during the design. Since test scenarios specify a part of systems' behavior, developers know the role the scenario plays the systems' processes from the bigger picture perspective during the implementation. Knowing the role of each scenario on the bigger story enables them to switch back to visual modeling boards with feedback, and deeper insight after implementing the test.
 
 ### How it works?
 The process starts by visualizing an abstract scenario by clicking on some of the stickies which form the model. Then you select a test template to generate a high quality test case. The test cases sit on the middle ground and act like guardrails to keep the implementation on the track. 
-You quickly derive production code from the design with total confidence. The quickness of the process enables scenario hunters to get instant feedback.
+You quickly derive production code by visual designs with total confidence.
 
 ### 5 Minute Demo:
 
