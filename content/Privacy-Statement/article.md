@@ -1,4 +1,5 @@
 # Privacy Statement
+*Effective as of August 11, 2020.*
 
 We respect your privacy and are committed to protecting it. **This app is designed to run locally on your browser, ensuring that your experience is personal and secure.**
 
