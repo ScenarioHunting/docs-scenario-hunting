@@ -1,2 +1,2 @@
 
-https://scenariohunting.github.io/docs-scenario-hunting/
+https://scenariohunting.github.io/docs-scenario-hunting
