@@ -1,1 +1,2 @@
-[https://docs.ScenarioHunting.com](https://docs.scenariohunting.com/)
+
+https://scenariohunting.github.io/docs-scenario-hunting/#/
